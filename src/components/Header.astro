@@ -1,0 +1,27 @@
+---
+import ButtonDark from "./ButtonDark.astro";
+---
+
+<script >
+    
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+        } else {
+        document.documentElement.classList.remove('dark')
+        }
+
+</script>
+
+
+<header class="flex justify-between items-center py-3 px-12 w-11/12 h-24 sticky top-0 z-10">
+
+    <a class="border-2 border-black/5 rounded-2xl px-3 py-2 font-semibold hover:scale-110 bg-[#D6CCC2] dark:bg-black/20 " href="https://drive.google.com/file/d/1a2DhsUsBfpb9L0CMwQWtr7hcpiYdUMA3/view?usp=sharing" target="_blank">Descargar CV</a>
+
+    <nav class=" flex flex-row gap-x-10 list-none text-xl bg-[#D6CCC2] dark:bg-black/20  px-3 py-1 rounded-full border-2 border-black/5 flex-wrap " >
+        <a class="hover:bg-[#E5DED8] dark:hover:bg-[rgba(120,119,198,0.3)] rounded-full px-3 transition" href="#sobre_mi"><li class="navegacion">Sobre mí</li></a>
+        <a class="hover:bg-[#E5DED8] dark:hover:bg-[rgba(120,119,198,0.3)] rounded-full px-3 transition" href="#contacto"><li class="navegacion">Contacto</li></a>
+        <a class="hover:bg-[#E5DED8] dark:hover:bg-[rgba(120,119,198,0.3)] rounded-full px-3 transition" href="#Portafolio"><li class="navegacion">Portafolio</li></a>
+    </nav>
+   <!-- <button class="border-2 border-black p-2 rounded-full hover:scale-110 " @click={changeDarkMode} >Dark </button> -->
+   <ButtonDark/>
+</header>
