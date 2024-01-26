@@ -1,8 +1,3 @@
 {
-  "extends": "./astro/tsconfigs/base",
-  "compilerOptions": {
-    // Otras opciones de compilación específicas si es necesario
-  },
-  "include": ["src/**/*.ts", "src/**/*.d.ts"],
-  "exclude": ["node_modules"]
+  "extends": "astro/tsconfigs/strict"
 }

@@ -7,4 +7,6 @@ export default defineConfig({
   integrations: [tailwind()],
   site: 'https://maynor06.github.io',
   base: '/Portafolio-Astro',
+
+  tsconfig: './tsconfig.json',
 });
